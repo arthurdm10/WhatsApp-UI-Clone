@@ -25,6 +25,13 @@ class AvatarDialog extends StatelessWidget {
         backgroundColor: Colors.black26.withOpacity(0.65),
         body: Stack(
           children: <Widget>[
+            Container(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ),
             Positioned(
               top: screenSize.height * 0.15,
               left: screenSize.width / 2 - containerWidth / 2,
