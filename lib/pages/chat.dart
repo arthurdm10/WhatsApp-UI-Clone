@@ -8,6 +8,7 @@ class Chat extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           ChatListItem(
+            heroTag: "chat-1",
             chatName: "Chat 1",
             msg: Row(
               children: <Widget>[
@@ -29,12 +30,14 @@ class Chat extends StatelessWidget {
             seen: true,
           ),
           ChatListItem(
+            heroTag: "chat-2",
             chatName: "Chat 2",
             msg: Text("Teste 123"),
             msgTime: "18:23",
             muted: true,
           ),
           ChatListItem(
+            heroTag: "chat-3",
             chatName: "Chat 3",
             msg: Text("Teste 123"),
             msgTime: "17:53",
@@ -42,6 +45,7 @@ class Chat extends StatelessWidget {
             seen: true,
           ),
           ChatListItem(
+            heroTag: "chat-4",
             chatName: "Chat 4",
             msg: Row(
               children: <Widget>[
@@ -62,6 +66,7 @@ class Chat extends StatelessWidget {
             muted: true,
           ),
           ChatListItem(
+            heroTag: "chat-5",
             chatName: "Chat 5",
             msg: Row(
               children: <Widget>[

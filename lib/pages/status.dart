@@ -56,10 +56,12 @@ class Status extends StatelessWidget {
           StatusListItem(
             title: "Contato 1",
             subTitle: "Ontem 14:32",
+            heroTag: "status-contato-1",
           ),
           StatusListItem(
             title: "Contato 2",
             subTitle: "Ontem 23:07",
+            heroTag: "status-contato-2",
           ),
         ],
         crossAxisAlignment: CrossAxisAlignment.start,

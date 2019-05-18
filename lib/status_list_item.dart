@@ -4,8 +4,9 @@ import 'package:whatsapp_clone/list_item.dart';
 class StatusListItem extends StatelessWidget {
   final String title;
   final String subTitle;
+  final String heroTag;
 
-  StatusListItem({Key key, this.title, this.subTitle}) : super(key: key);
+  StatusListItem({Key key, this.title, this.subTitle, this.heroTag}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +18,7 @@ class StatusListItem extends StatelessWidget {
         ),
       ),
       subTitle: Text(subTitle),
+      heroTag: heroTag,
     );
   }
 }

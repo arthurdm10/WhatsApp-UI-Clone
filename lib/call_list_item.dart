@@ -9,12 +9,14 @@ class CallListItem extends StatelessWidget {
   final bool answered;
   final String contact;
   final String callTime;
+  final String heroTag;
 
-  CallListItem(this.contact, this.callTime, this.answered);
+  CallListItem(this.contact, this.callTime, this.answered, this.heroTag);
 
   @override
   Widget build(BuildContext context) {
     return ListItem(
+      heroTag: heroTag,
       title: Text(contact),
       subTitle: Row(
         children: <Widget>[

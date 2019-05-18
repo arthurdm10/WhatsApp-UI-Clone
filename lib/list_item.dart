@@ -1,23 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/hero_avatar.dart';
 
 class ListItem extends StatelessWidget {
   final Widget title;
   final Widget subTitle;
-  Widget traillingWidget = Container();
+  final Widget traillingWidget;
+  final String heroTag;
 
-  ListItem({Key key, this.title, this.subTitle, this.traillingWidget})
+  final GestureTapCallback onTap;
+
+  ListItem(
+      {Key key,
+      this.heroTag,
+      this.title,
+      this.subTitle,
+      this.traillingWidget,
+      this.onTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(
-        backgroundImage: AssetImage("assets/avatar_placeholder.png"),
-        maxRadius: 20.0,
+      leading: HeroAvatar(
+        heroTag: heroTag,
       ),
       title: title,
       subtitle: subTitle,
       trailing: traillingWidget,
+      onTap: onTap,
     );
   }
 }
