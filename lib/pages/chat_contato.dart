@@ -98,14 +98,44 @@ class _ChatContatoState extends State<ChatContato> {
                     ),
                     ChatMsg(
                       msg:
-                          "asd15156dsa516dsa156dsa156sda156sad156asd156ads156ads156asd156asd15asd15ads1",
+                          "asd15156dsa516dsa156dsa156sda\dsadadsadsadsadadasdsadn156sad156asd156ads156ads156asd156asd15asd15ads1",
                       msgTime: "01:32",
                       received: false,
+                      msgStatus: MsgStatus.seen,
                     ),
                     ChatMsg(
                       msg: "Teste1234",
                       msgTime: "01:14",
                       received: false,
+                      msgStatus: MsgStatus.seen,
+                    ),
+                    ChatMsg(
+                      msg: "T34",
+                      msgTime: "01:14",
+                      received: false,
+                      msgStatus: MsgStatus.seen,
+                    ),
+                    ChatMsg(
+                      msg: "test",
+                      msgTime: "01:14",
+                    ),
+                    ChatMsg(
+                      msg: "test abc",
+                      msgTime: "01:14",
+                      received: false,
+                      msgStatus: MsgStatus.sent,
+                    ),
+                    ChatMsg(
+                      msg: "test abc",
+                      msgTime: "01:14",
+                      received: false,
+                      msgStatus: MsgStatus.receveid,
+                    ),
+                    ChatMsg(
+                      msg: "test abc",
+                      msgTime: "01:14",
+                      received: false,
+                      msgStatus: MsgStatus.notSent,
                     ),
                   ],
                 ),
