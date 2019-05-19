@@ -36,6 +36,23 @@ class AvatarDialog extends StatelessWidget {
               top: screenSize.height * 0.15,
               left: screenSize.width / 2 - containerWidth / 2,
               child: Hero(
+                flightShuttleBuilder: (BuildContext flightContext,
+                    Animation<double> animation,
+                    HeroFlightDirection flightDirection,
+                    BuildContext fromHeroContext,
+                    BuildContext toHeroContext) {
+                  return Container(
+                    child: Column(
+                      children: <Widget>[
+                        Flexible(
+                          child: Image.asset(
+                            avatar,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
                 tag: heroTag,
                 child: Container(
                   width: containerWidth,

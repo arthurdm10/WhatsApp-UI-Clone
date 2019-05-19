@@ -18,6 +18,12 @@ class HeroAvatar extends StatelessWidget {
       ),
       child: Hero(
         tag: heroTag,
+        placeholderBuilder: (BuildContext context, Widget widget) {
+          return CircleAvatar(
+            backgroundImage: AssetImage(imageName),
+            maxRadius: 20.0,
+          );
+        },
         child: Container(
           child: CircleAvatar(
             backgroundImage: AssetImage(imageName),

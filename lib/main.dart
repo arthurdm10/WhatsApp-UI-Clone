@@ -8,6 +8,7 @@ import 'pages/status.dart';
 import 'pages/camera.dart';
 
 void main() => runApp(App());
+enum WhyFarther { harder, smarter, selfStarter, tradingCharter }
 
 class App extends StatelessWidget {
   final List<Widget> topTabs = [
@@ -36,7 +37,31 @@ class App extends StatelessWidget {
   void foo() {}
   final List<Widget> appBarActions = [
     AppBarAcionIcon(iconData: Icons.search),
-    AppBarAcionIcon(iconData: Icons.more_vert),
+    // AppBarAcionIcon(iconData: Icons.more_vert),
+    PopupMenuButton<int>(
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<int>>[
+            const PopupMenuItem<int>(
+              value: 0,
+              child: Text('New group'),
+            ),
+            const PopupMenuItem<int>(
+              value: 1,
+              child: Text('New broadcast'),
+            ),
+            const PopupMenuItem<int>(
+              value: 2,
+              child: Text('WhatsApp web'),
+            ),
+            const PopupMenuItem<int>(
+              value: 3,
+              child: Text('Starred messages'),
+            ),
+            const PopupMenuItem<int>(
+              value: 4,
+              child: Text('Settings'),
+            ),
+          ],
+    )
   ];
 
   @override
