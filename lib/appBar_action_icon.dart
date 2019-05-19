@@ -4,9 +4,18 @@ class AppBarAcionIcon extends StatelessWidget {
   final IconData iconData;
   final GestureTapCallback onTap;
   final Color iconColor;
+  final double iconSize;
+  final EdgeInsets containerPadding;
 
   const AppBarAcionIcon(
-      {this.iconData, this.onTap, this.iconColor = Colors.white});
+      {this.iconData,
+      this.onTap,
+      this.iconSize = 24,
+      this.iconColor = Colors.white,
+      this.containerPadding = const EdgeInsets.only(
+        top: 12.0,
+        bottom: 12.0,
+      )});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +23,8 @@ class AppBarAcionIcon extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
       ),
-      padding: const EdgeInsets.only(
-        top: 12.0,
-        bottom: 12.0,
-      ),
-      margin: const EdgeInsets.only(right: 8.0),
+      padding: containerPadding,
+      margin: const EdgeInsets.only(right: 12.0),
       child: InkWell(
         customBorder: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(60),
@@ -28,7 +34,7 @@ class AppBarAcionIcon extends StatelessWidget {
           child: Icon(
             iconData,
             color: iconColor,
-            size: 24,
+            size: iconSize,
           ),
         ),
         onTap: onTap != null ? onTap : () {},

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/chat_trailling.dart';
+import 'package:whatsapp_clone/pages/chat_contato.dart';
 
 import 'list_item.dart';
 
@@ -32,6 +33,13 @@ class ChatListItem extends StatelessWidget {
       subTitle: msg,
       traillingWidget: chatTrailling,
       heroTag: heroTag,
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext build) => ChatContato(contato: chatName),
+          ),
+        );
+      },
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/appBar_action_icon.dart';
 import 'package:whatsapp_clone/badge.dart';
 import 'pages/calls.dart';
-import 'pages/chat.dart';
+import 'pages/chats.dart';
 import 'pages/status.dart';
 
 import 'pages/camera.dart';
@@ -50,6 +50,12 @@ class App extends StatelessWidget {
         length: topTabs.length,
         initialIndex: 1,
         child: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            heroTag: "floatingButton",
+            onPressed: () {},
+            backgroundColor: Colors.green.shade700,
+            child: Icon(Icons.chat, color: Colors.white),
+          ),
           appBar: AppBar(
             title: Text("WhatsApp"),
             bottom: TabBar(
@@ -62,7 +68,7 @@ class App extends StatelessWidget {
           body: TabBarView(
             children: <Widget>[
               Camera(),
-              Chat(),
+              Chats(),
               Status(),
               Calls(),
             ],
