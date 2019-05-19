@@ -33,9 +33,12 @@ class ChatTrailling extends StatelessWidget {
     }
 
     if (!seen) {
-      children.add(Badge(
+      children.add(
+        Badge(
           value: Random().nextInt(200).toString(),
-          backgroundColor: Colors.green));
+          backgroundColor: Color(0xff00d163),
+        ),
+      );
     }
 
     return Container(

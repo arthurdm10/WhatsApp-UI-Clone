@@ -110,13 +110,7 @@ class _ChatContatoState extends State<ChatContato> {
                       msgStatus: MsgStatus.seen,
                     ),
                     ChatMsg(
-                      msg: "T34",
-                      msgTime: "01:14",
-                      received: false,
-                      msgStatus: MsgStatus.seen,
-                    ),
-                    ChatMsg(
-                      msg: "test",
+                      msg: "TEST 123456789 ABC",
                       msgTime: "01:14",
                     ),
                     ChatMsg(

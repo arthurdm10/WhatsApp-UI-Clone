@@ -84,7 +84,7 @@ class Chats extends StatelessWidget {
                   Text("Video"),
                 ],
               ),
-              msgTime: "Ontem",
+              msgTime: "Yesterday",
               muted: false,
             ),
           ],

@@ -12,7 +12,7 @@ class ChatMsg extends StatelessWidget {
   final String msgTime;
   final MsgStatus msgStatus;
   final bool received; //mensagem foi enviada pelo contato ?
-  static const double iconSize = 12;
+  static const double iconSize = 15;
   static const Map<MsgStatus, Icon> statusIcon = {
     MsgStatus.sent: Icon(Icons.done, size: iconSize),
     MsgStatus.receveid: Icon(Icons.done_all, size: iconSize),
@@ -42,40 +42,46 @@ class ChatMsg extends StatelessWidget {
       alignment:
           received ? FractionalOffset.centerLeft : FractionalOffset.centerRight,
       child: Container(
-        constraints: BoxConstraints(maxWidth: 230.0),
+        constraints: BoxConstraints(maxWidth: 280.0),
         margin: msgMargin(),
         padding: EdgeInsets.all(5.0),
         decoration: BoxDecoration(
-          color: received ? Colors.white : Colors.yellow.shade50,
+          color: received ? Colors.white : Color(0xffe0fec7),
           borderRadius: BorderRadius.circular(5),
         ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Flexible(
-              flex: 4,
-              child: Container(
-                child: Text(
-                  msg,
-                ),
-              ),
-            ),
-            Flexible(
-              flex: 1,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(left: 5, right: 3),
+            Stack(
+              children: <Widget>[
+                Align(
+                  widthFactor: 1.2,
+                  alignment: Alignment.centerLeft,
+                  child: Container(
                     child: Text(
-                      msgTime,
-                      style: TextStyle(fontSize: 9),
+                      msg,
                     ),
                   ),
-                  received ? null : statusIcon[msgStatus],
-                ].where((Object widget) => widget != null).toList(),
-              ),
+                ),
+              ],
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(top: 2),
+                  child: Text(
+                    msgTime,
+                    style: TextStyle(fontSize: 10),
+                  ),
+                ),
+                Container(
+                    margin: EdgeInsets.only(left: 5),
+                    child: received ? null : statusIcon[msgStatus]),
+              ].where((Object widget) => widget != null).toList(),
             ),
           ],
         ),

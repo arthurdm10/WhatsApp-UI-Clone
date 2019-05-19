@@ -4,8 +4,8 @@ import 'package:whatsapp_clone/status_list_item.dart';
 class Status extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
+    return Scaffold(
+      body: Column(
         children: <Widget>[
           Row(
             children: <Widget>[

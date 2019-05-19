@@ -14,20 +14,20 @@ class HeroAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       customBorder: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(23.0),
       ),
       child: Hero(
         tag: heroTag,
         placeholderBuilder: (BuildContext context, Widget widget) {
           return CircleAvatar(
             backgroundImage: AssetImage(imageName),
-            maxRadius: 20.0,
+            maxRadius: 23.0,
           );
         },
         child: Container(
           child: CircleAvatar(
             backgroundImage: AssetImage(imageName),
-            maxRadius: 20.0,
+            maxRadius: 23.0,
           ),
         ),
       ),
